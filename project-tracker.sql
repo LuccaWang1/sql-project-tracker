@@ -94,6 +94,11 @@ ALTER TABLE ONLY public.grades ALTER COLUMN id SET DEFAULT nextval('public.grade
 --
 
 COPY public.grades (id, student_github, project_title, grade) FROM stdin;
+1	jhacks	Markov	10
+2	jhacks	Blockly	2
+3	sdevelops	Markov	50
+4	sdevelops	Blockly	100
+5	LegendGlassBreaker	Carpool_Karaoke	1000
 \.
 
 
@@ -125,7 +130,7 @@ LegendGlassBreaker	Mariah	Carrey
 -- Name: grades_id_seq; Type: SEQUENCE SET; Schema: public; Owner: nicole
 --
 
-SELECT pg_catalog.setval('public.grades_id_seq', 1, false);
+SELECT pg_catalog.setval('public.grades_id_seq', 6, true);
 
 
 --
